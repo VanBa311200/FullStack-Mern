@@ -1,0 +1,53 @@
+POST http://localhost:5000/api/auth/register
+content-type: application/json
+
+{
+    "username": "nam",
+    "password": "nam"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+content-type: application/json
+
+{
+    "username": "admin",
+    "password": "admin"
+}
+
+###
+
+POST http://localhost:5000/api/posts
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTFkMDZjYzNiZmIwMDQyYzgyOGVhYzIiLCJpYXQiOjE2Mjk4OTYxMjZ9.GIQd4TI0Yf4RPa95GrEUdmexfLkOQEPYfG5aWSkkiOE
+
+{
+    "title": "My thirth post",
+    "description": "test",
+    "url": "www.facebook.com/",
+    "status": "To Learn"
+}
+
+###
+
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTFkMDZjYzNiZmIwMDQyYzgyOGVhYzIiLCJpYXQiOjE2Mjk4OTIwNzN9.xx8qOUk8qjBIYFWqicqJaJNd7AfPQRnDOhZFe9WaTDY
+
+###
+
+PUT http://localhost:5000/api/posts/611b5aa41d8cca09d4390aaa
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTFiNWE1NTFkOGNjYTA5ZDQzOTBhYTciLCJpYXQiOjE2MjkxODI1NTR9.GccW4jiC9IQ9fm5VEFXbUqYk4JrXroxqPjnPHc6jgrY
+
+{
+    "title": "My update first  post",
+    "description": "ok im ready refeshed",
+    "url": "www.w3school.com/",
+    "status": "Learning"
+}
+
+###
+
+DELETE http://localhost:5000/api/posts/611b5aa41d8cca09d4390aaa
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTFiNWE1NTFkOGNjYTA5ZDQzOTBhYTciLCJpYXQiOjE2MjkxODI1NTR9.GccW4jiC9IQ9fm5VEFXbUqYk4JrXroxqPjnPHc6jgrY

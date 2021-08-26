@@ -1,0 +1,14 @@
+.center-wrapper {
+	position: relative;
+	min-width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.pa-bl {
+	position: absolute;
+	right: 50px;
+	bottom: 70px;
+}
